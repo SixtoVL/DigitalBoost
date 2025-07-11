@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
+import helmet from "helmet"; // nuevo
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -10,45 +11,37 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = process.env.PORT || 8080;
 
+// Seguridad básica
+app.use(helmet());
+
 // Middlewares
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(express.urlencoded({extended: false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// Configuración de motor de plantillas
+// Configuración de vistas
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
-// Archivos estáticos (css, scripts, imágenes)
+// Archivos públicos
 app.use(express.static(path.join(__dirname, "public")));
 
-// ==============================
-// RUTAS PRINCIPALES
-// ==============================
-
-//Página de Inicio
-app.get("/",(req,res)=>{
-    res.render("index", { title: "Inicio | Digital Boost" });
+// Rutas
+app.get("/", (req, res) => {
+  res.render("index", { title: "Inicio | Digital Boost" });
 });
 
-// Servicios
 app.get("/servicios", (req, res) => {
-  res.render("pages/servicios", { title: "Servicios | Digital Boost" }); // views/paginas/servicios.pug
+  res.render("pages/servicios", { title: "Servicios | Digital Boost" });
 });
 
-
-
-// ==============================
-// RUTA PARA ERROR 404
-// ==============================
-app.use("/",(req,res)=>{
-    res.status(404).render("pages/error-404");
+// Ruta 404
+app.use((req, res) => {
+  res.status(404).render("pages/error-404", { title: "Página no encontrada" });
 });
 
-// ==============================
-// INICIAR SERVIDOR
-// ==============================
+// Iniciar servidor
 app.listen(port, () => {
-    console.log(`Sitio web corriendo en http://localhost:${port}`);
-})
+  console.log(`Servidor activo en el puerto ${port}`);
+});
