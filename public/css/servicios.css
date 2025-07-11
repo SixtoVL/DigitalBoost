@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image{
+    background-image: url("/img/servicios_heroimage2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 70vh;
+    color: #eee;
+}
+
+.hero-image div{
+    background-color: rgba(0,0,0,.75);
+}
+.hero-image h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.hero-image p{
+    font-size: 1.25rem;
+}
+.hi-container{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container{
+    min-height: 70vh;
+    min-width: 100%;
+}
+
+.container-servicios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-self: center;
+
+}
+
+.container-servicios-item{
+    flex: 1 1 33.3333%;
+    align-self: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.container-servicios img{
+    max-width: 300px;
+    max-height: 300px;
+}

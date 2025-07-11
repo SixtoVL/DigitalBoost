@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.titulares{
+    padding: 1rem;
+    background-color: #222;
+    color: #eee;
+}
+
+/*Footer*/
+.footer-izq ul{
+    list-style-type: none; 
+}
+
+.footer-izq ul a{
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-items: center;
+}
+
+.footer-izq,
+.footer-cen,
+.footer-der {
+  flex: 1 1 30%;
+  min-width: 200px; /* Para asegurar que no se achiquen demasiado */
+}
+
+.footer-izq h2,
+.footer-cen h2,
+.footer-der h2 {
+  text-align: center;
+}
+.footer-izq ul {
+    justify-self: center;
+}
+
+.footer-der ul{
+    display: flex;
+    list-style-type: none;
+    justify-self: center;
+}
+
+.footer-der li{
+    padding: .5rem;
+}
+
+.footer-der img{
+    max-width: 30px;
+}
+
+.footer-bot{
+  text-align: center;
+}

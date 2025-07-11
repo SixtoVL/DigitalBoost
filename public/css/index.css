@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.hero-image{
+    background-image: url("/img/servicios_heroimage1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100vh;
+    color: #eee;
+}
+
+.hero-image div{
+    background-color: rgba(0,0,0,.75);
+}
+
+.hero-image h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.hero-image p{
+    font-size: 1.25rem;
+}
+.hi-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hi-container a{
+    background-color: green;
+    border: green solid;
+    border-radius: 2rem;
+    padding: .5rem;
+    color: #eee;
+    list-style-type: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;    
+}
+
+.hi-container a :hover{
+    opacity: 0.75;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    min-width: 100%;
+}
+
+.container-info,
+.container-im {
+  flex: 1 1 50%;
+  min-width: 200px; /* Para asegurar que no se achiquen demasiado */
+}
+
+.container-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.container-im{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container-im img{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 70vh;
+        min-width: 100%;
+    }
+    .container-reverse{
+        flex-direction: row-reverse;
+    }
+}
