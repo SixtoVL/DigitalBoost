@@ -8,8 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = process.env.PORT || 3000;
-
+const port = process.env.PORT || 8080;
 
 // Middlewares
 app.use(morgan("dev"));
@@ -52,4 +51,4 @@ app.use("/",(req,res)=>{
 // ==============================
 app.listen(port, () => {
     console.log(`Sitio web corriendo en http://localhost:${port}`);
-});
+})
