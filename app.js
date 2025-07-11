@@ -2,19 +2,19 @@ import express from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
-import helmet from "helmet"; // nuevo
+import helmet from "helmet"; 
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3003;
 
-// Seguridad básica
-app.use(helmet());
+
 
 // Middlewares
+app.use(helmet()); // Seguridad básica
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
