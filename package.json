@@ -1,15 +1,15 @@
 {
   "name": "digital_boost",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Sitio web de la consultora Digital Boost",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Angel Sixto",
+  "license": "MIT",
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "express": "^5.1.0",
