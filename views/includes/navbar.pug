@@ -1,5 +1,7 @@
 header.titulares.header
-  div.logo Digital Boost
+  div.logo
+    a(href="/")
+      img(src="./assets/logo_db3.png", alt="")
   button.menu-hamburguesa#btn-menu
     img(src="/assets/hamburger.png" alt="Menú")
   nav.menu
@@ -7,15 +9,21 @@ header.titulares.header
       li
         a(href="/") Inicio
       li
-        a(href="#") Quienes Somos
+        a(href="/quienes_somos") Quienes Somos
       li
         a(href="/servicios") Servicios 
         ul.submenu  
           li
-            a(href="#/servicios/consultoria") Consultoría  
+            a(href="/servicios/consultoria") Consultoría
+          li
+            a(href="/servicios/implementacion") Implementación
+          li
+            a(href="/servicios/automatizacion") Automatización
+          li
+            a(href="/servicios/soporte") Soporte 
       li
         a(href="#") Proyectos
       li
         a(href="#") Blog
       li
-        a(href="#") Contacto
+        a(href="/contacto") Contacto

@@ -11,6 +11,10 @@
     color: #eee;
 }
 
+.logo a img{
+    max-height: 80px;
+}
+
 .header{
     display: flex;
     flex-direction: row;

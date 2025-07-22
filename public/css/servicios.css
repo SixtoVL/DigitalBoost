@@ -60,3 +60,9 @@
     max-width: 300px;
     max-height: 300px;
 }
+
+.container-servicios-item a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}

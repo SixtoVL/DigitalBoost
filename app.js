@@ -1,9 +1,10 @@
-import express from "express";
+import express, { response } from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import helmet from "helmet"; 
 import { fileURLToPath } from "url";
+import { title } from "process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,9 +31,17 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Inicio | Digital Boost" });
 });
 
+app.get("/quienes_somos",(req, res)=>{
+  res.render("pages/quienes_somos",{title: "Quienes somos | Digital Boost"});
+});
+
 app.get("/servicios", (req, res) => {
   res.render("pages/servicios", { title: "Servicios | Digital Boost" });
 });
+
+app.get("/contacto",(req,res)=>{
+  res.render("pages/contacto",{title: "Contacto | Digital Boost" });
+})
 
 // Ruta 404
 app.use((req, res) => {
