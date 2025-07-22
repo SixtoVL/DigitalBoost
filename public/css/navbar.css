@@ -13,7 +13,7 @@
 
 .header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -27,11 +27,68 @@
     cursor: pointer;
 }
 
+.menu ul a:hover{
+    color: #0080ff;
+}
+
+.menu ul li .submenu{
+    display: none;
+}
+
+.menu ul li:hover .submenu{
+    display: block;
+}
+
+
+@media screen and (max-width: 767px) {
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header button{
+        background-color: #222;
+        border-style: none;
+        cursor: pointer;
+    }
+    .menu-hamburguesa img{
+        max-width: 30px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #222;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        margin-top: 65px; /* espacio para que no tape el header */
+        z-index: 1000;
+        }
+
+        /* Cuando se activa, deslízalo a su lugar (posición 0) */
+    .menu.activo {
+        transform: translateX(0);
+    }
+
+    .menu li {
+        padding: 1rem;
+        border-bottom: 1px solid #555;
+    }
+
+}
 @media screen and (min-width: 768px){
     .header{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .menu-hamburguesa {
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
     }
 
     .menu ul {
@@ -39,5 +96,12 @@
     }
     .menu li {
         padding: 1rem;
+    }
+    .menu ul li .submenu{
+        display: none;
+        position: fixed;
+        background-color: #222;
+        min-width: 150px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 }

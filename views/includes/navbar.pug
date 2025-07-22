@@ -1,5 +1,7 @@
 header.titulares.header
-  .logo Digital Boost
+  div.logo Digital Boost
+  button.menu-hamburguesa#btn-menu
+    img(src="/assets/hamburger.png" alt="Menú")
   nav.menu
     ul
       li
@@ -7,7 +9,10 @@ header.titulares.header
       li
         a(href="#") Quienes Somos
       li
-        a(href="/servicios") Servicios
+        a(href="/servicios") Servicios 
+        ul.submenu  
+          li
+            a(href="#/servicios/consultoria") Consultoría  
       li
         a(href="#") Proyectos
       li

@@ -17,9 +17,12 @@
 }
 
 .footer-izq ul a{
-    color: #eee;
-    text-decoration: none;
-    cursor: pointer;
+  color: #eee;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer-izq ul a:hover{
+  color: #0080ff;
 }
 
 .footer-top {

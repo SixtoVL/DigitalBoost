@@ -9,13 +9,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = process.env.PORT || 3003;
-
-
+const port = process.env.PORT || 3000;
 
 // Middlewares
 app.use(helmet()); // Seguridad básica
-app.use(morgan("dev"));
+app.use(morgan());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
