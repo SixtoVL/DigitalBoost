@@ -38,7 +38,9 @@ app.get("/servicios", (req, res) => {
 app.use((req, res) => {
   res.status(404).render("pages/error-404", { title: "Página no encontrada" });
 });
-
+/*app.use((req, res) => {
+  res.status(404).send("Página no encontrada");
+});*/
 // Iniciar servidor
 app.listen(port, () => {
   console.log(`Servidor activo en el puerto ${port}`);
