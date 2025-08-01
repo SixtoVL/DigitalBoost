@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image{
+    background-image: url("/img/contacto_heroim.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 50vh;
+    color: #eee;
+}
+
+.hero-image div{
+    background-color: rgba(0,0,0,.75);
+}
+.hero-image h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.hero-image p{
+    font-size: 1.25rem;
+}
+.hi-container{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container{
+    min-height: 70vh;
+    min-width: 100%;
+}
+
+.container-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.container-formulario h2{
+    padding: 2rem 2rem 0 2rem;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.formulario label{
+    margin-top: 1rem;
+}
+
+.formulario input{
+    margin-top: 1rem;
+    height: 2rem;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  resize: none;
+}
+
+.submit{
+    background-color: green;
+    border: green solid;
+    border-radius: 2rem;
+    padding: .5rem;
+    color: #eee;
+    cursor: pointer;
+    transition: all 0.3s ease-out;    
+}
+.submit:hover{
+    opacity: .6;
+}
+
+@media screen and (min-width: 1024px) {
+    .container-formulario{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        width: 50%;
+        margin-top: 1rem;
+    }
+    .container-formulario h2{
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .formulario label{
+        margin-top: 1rem;
+    }
+
+    .formulario input{
+        margin-top: 1rem;
+    }
+    
+}
+

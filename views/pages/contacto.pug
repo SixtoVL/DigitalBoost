@@ -1,6 +1,29 @@
 extends ../layout
 
+block styles 
+    link(rel="stylesheet", href="/css/contacto.css")
+
 block content 
     main 
-        section
-            h2 Contacto
+        //- Hero image
+        section.hero-image
+            div.hi-container
+                h1 Cuéntanos sobre tu proyecto
+                p ¿Te interesa colaborar? Mandanos mensaje y enseguida nos contactaremos
+
+        section.container
+            article.container-formulario
+                h2 Estamos comprometidos en contribuir al éxito de su empresa a través de soluciones digitales innovadoras.
+                form(action="").formulario
+                    label(for="nombre") Nombre(s)
+                    input(type="text" id="nombre")
+                    label(for="apellido") Apellido(s) 
+                    input(type="text" id="apellido")
+                    label(for="email") Dirección de correo electrónico
+                    input(type="email" id="email")
+                    label(for="telefono") WhatsApp
+                    input(type="tel" id="telefono")  
+                    label(for="mensaje") Mensaje 
+                    textarea(name="Mensaje") 
+                    input(type="submit").submit
+
